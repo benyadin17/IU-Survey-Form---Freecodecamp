@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IU Survey Form</title>
+</head>
+<body>
+        <h1 id="title">IU Survey Form</h1>
+    <div id="description">Thank you for your time and please keep listening to IU song</div>
+        <div class="container" id="form">
+        <form id="survey-form">
+            <div class="row">
+              <div class="label">
+                <label for="name" id="name-label">Name:</label>
+              </div>
+              <div class="form-content">
+                <input type="text" id="name" name="name" placeholder="Enter your name" required />
+              </div>
+            </div>
+        <br>
+        <form id="survey-form">
+            <div class="row">
+                <div class="label">
+                  <label for="email" id="email-label">Email:</label>
+                </div>
+                <div class="form-content">
+                  <input type="text" id="email" name="email" placeholder="Enter your email" required />
+                </div>
+            </div>
+      <br>
+        <form id="survey-form">
+            <div class="row">
+                <div class="label">
+                  <label for="age" id="age-label">Age (Optional):</label>
+                </div>
+                <div class="form-content">
+                  <input type="number" id="number" name="age" placeholder="Age" min="14" max="100" />
+                </div>
+            </div>
+        <br>
+
+            <div class="row">
+                <div class="label">
+                  <label for="song">Do you like IU or her song?</label>
+                </div>
+                <div class="form-content">
+                  <input type="radio" name="song" value="IU"> IU<br/>
+                  <input type="radio" name="song" value="IU Song"> IU Song<br/>
+                  <input type="radio" name="song" value="IU and her song"> IU and her song<br/>
+                </div>
+            </div>
+          <br>
+            <div class="row">
+                <div class="label">
+                  <label for="length">If so, how long have do you like about it?</label>
+                </div>
+                <div class="form-content">
+                  <select id="dropdown" name="length">
+                    <option value="under-one">Less than 1 years</option>
+                    <option value="one-to-five">1-5 years</option>
+                    <option value="five-to-ten">5-10 years</option>
+                    <option value="over-ten">more than 10 years</option>
+                  </select>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="label">
+                  <label for="languages">Which the most IU song you like?</label>
+                </div>
+                <div class="form-content">
+                  <input type="checkbox" name="song1" value="song"> Pallete<br />
+                  <input type="checkbox" name="song2" value="song"> Twenty Three</span><br />
+                  <input type="checkbox" name="song3" value="song"> Modern Times</span><br />
+                  <input type="checkbox" name="song4" value="song"> Love Poem</span><br />
+                  <input type="checkbox" name="song5" value="song"> Above Time</span><br />
+                  <input type="checkbox" name="song6" value="song"> You and I</span><br />
+                  <input type="checkbox" name="song7" value="song"> Good Times</span><br />
+                  <input type="checkbox" name="song8" value="song"> BBIBBI</span><br />
+                  <input type="checkbox" name="song9" value="song"> Blueming</span><br />
+                  <input type="checkbox" name="song10" value="song"> Celebrity</span><br />
+                  <input type="checkbox" name="song11" value="song"> All of IU song</span><br />
+                </div>
+              </div>
+              <br>
+              <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea
+                  id="comments"
+                  class="input-textarea"
+                  name="comment"
+                  placeholder="Enter your comment here..."
+                ></textarea>
+              </div>
+          
+              <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                  Submit
+                </button>
+              </div>
+            </form>
+        </div>
+<footer>
+  <div class="footer">  
+  Made by <a href="https://codepen.io/benyadin17/pen/abBgRgY"> Benyadin17</a>
+    <a>&copy; March 2021</a>
+  </div>
+</footer>
+</html>
+<!--css-->
+<style>
+    :root {
+    --color-white: #ffffff;
+    --color-darkpurple: rgb(99, 0, 99);
+    --color-darkblue-alpha: rgba(32, 11, 30, 0.8);
+    --color-violet:rgb(158, 1, 145);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkpurple);
+  background-image: linear-gradient(
+      115deg,
+       rgba(104, 3, 104, 0.7),
+       rgba(167, 18, 167, 0.7) 
+    ),
+    url(https://wallpapercave.com/wp/wp5358062.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+h1 {
+  font-family: 'Fredoka One', cursive;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#description{
+    text-align: center;
+}
+#survey-form{
+   line-height: 30px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+#name,
+#email, 
+#number,
+#dropdown{
+  width: 100%;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: auto;
+  font-family: roboto;
+  font-size: inherit;
+}
+
+button {
+  border: none;
+}
+
+.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+
+@media (min-width: 400px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 580px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 780px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+.description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+form {
+  background: var(--color-darkblue-alpha);
+  padding: 2.5rem 0.625rem;
+  border-radius: 2rem;
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 1rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+  border-radius: 10px;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-violet);
+  color: inherit;
+  border-radius: 20px;
+  cursor: pointer;
+}
+footer{
+    box-sizing: border-box;
+    background-color: purple;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    border-radius: 20px 20px 0px 0px
+}
+a{
+  color:white;
+}
+</style>
